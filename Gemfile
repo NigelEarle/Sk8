@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt', '~> 3.1.7'
 
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -26,6 +27,8 @@ group :development, :test do
   gem "guard-rspec"
   gem "guard-livereload"
   gem "factory_girl_rails"
+  gem "letter_opener"
+
 end
 
 group :test do

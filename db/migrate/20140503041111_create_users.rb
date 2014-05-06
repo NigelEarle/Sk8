@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :salt
       t.string :fish
+      t.string :code
+      t.datetime :expires_at
 
       t.timestamps
     end

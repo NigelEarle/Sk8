@@ -1,0 +1,41 @@
+<div class="password-reset-page">
+  <h1>Enter New Password</h1>
+  <div class="password-reset row">
+    <%= form_for @user, url: reset_url(@user.code), method: :patch, html: { id: "resetform"} do |f| %>
+
+      <div class="row">
+        <div class="small-8 small-centered columns">
+          <label class="hidden" for="Email">Email:</label>
+          <input type="text" id="user_email"
+            name="user[email]" placeholder="email or username" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-8 small-centered columns">
+          <label class="hidden" for"password">Password:</label>
+          <input type="password" id="password" name="user[password]" placeholder="password" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-8 small-centered columns">
+          <label class="hidden" for="password_confirmation">Password Confirmation:</label>
+          <input type="password" id="password_confirmation" name="user[password_confirmation]"
+          placeholder="password confirmation" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 columns end">
+          <input id="sign-in" class="right" type="submit" value="Submit" />
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <footer>
+    <a href="#">Terms &amp; Conditions</a>
+  </footer>
+</div>
+
+
+

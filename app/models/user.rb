@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
   protected
 
   def set_random_password
-    if self.fugu.blank? and self.password.blank?
+    if self.fish.blank? and self.password.blank?
       self.salt = BCrypt::Engine.generate_salt
       self.fish = BCrypt::Engine.hash_secret(SecureRandom.base64(32), self.salt)
     end
