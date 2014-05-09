@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require foundation/foundation
-//= require_tree .
+
+//= require jquery.min
+//= require jquery.mmenu.min.all
+//= require jquery.flexslider
+//= require o-script
+//= require leaflet.min
+// = require map
+

@@ -4,14 +4,10 @@ class SessionController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def new
-    # @messages = flash.inspect
-    # @messages = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
-    # render text: "Display the log in form."
     redirect_to root_url "You are logged in." if current_user
   end
 
   def create
-    # binding.pry
     if params[:user][:password].blank?
       #password reset flow
       PasswordResetter.new(flash).handle_reset_request(user_params)
@@ -25,7 +21,7 @@ class SessionController < ApplicationController
         render text: "Hell yeah!"
       else
         # fail
-        render text: "Oh nooooooo, silly rabbit we are out of TWIX!"
+        render text: "Sorry! Try again"
       end
     end
     # (redirect_to root_url and return) if flash.empty?
@@ -35,7 +31,6 @@ class SessionController < ApplicationController
 
   def destroy
     log_user_out
-    # render text: "Log the user out."
     # redirect_to login_url, notice: "You've successfully logged out."
   end
 

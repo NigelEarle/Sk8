@@ -8,11 +8,9 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  body
+  body class="o-page"
     == yield
 
-    footer
-      .row
-        p.text-muted
-          | &bull;
-          | &copy; 2014 Sk8
+    .subFooter
+      | &bull;
+      | &copy; 2014 Sk8

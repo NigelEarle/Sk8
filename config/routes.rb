@@ -9,12 +9,15 @@ Sk8::Application.routes.draw do
   get    'logout' => 'session#destroy'
 
   #password reset
-  get 'reset/:code' => 'password#edit', as: :reset
-  put 'reset/:code' => 'password#update'
-  patch 'reset/:code' => 'password#update'
+  get    'reset/:code' => 'password#edit', as: :reset
+  put    'reset/:code' => 'password#update'
+  patch  'reset/:code' => 'password#update'
 
   #registration
-  get  'registration' => 'registration#new'
-  post 'registration' => 'registration#create'
+  get    'registration' => 'registration#new'
+  post   'registration' => 'registration#create'
 
+  #spots
+  get    'spots' => 'spots#index'
+  get 'something' => 'spots#something'
 end
