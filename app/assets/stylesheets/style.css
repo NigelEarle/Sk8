@@ -49,7 +49,7 @@ h5, h6
 {
 	font-size: 14px;
 }
-h4 
+h4
 {
 	font-size: 15px;
 }
@@ -88,7 +88,7 @@ pre
 	padding: 0 50px;
 }
 
-.subHeader, .subFooter { 
+.subHeader, .subFooter {
 	background-color:#233241;
 	font-size: 15px;
 	color: #fff;
@@ -99,10 +99,10 @@ pre
 	position:relative;
 	width: 100%;
  }
- 
- 
+
+
 .subHeader i.i-small { position: absolute; left: 16px !important; top: 11px !important; margin: 0px; }
- 
+
 
 #header a,
 .header a
@@ -155,7 +155,7 @@ pre
 		/*background: #eee;*/
 	}
 	#page {
-		
+
 		min-height: 100%;
 	}
 	/* hide open-button */
@@ -239,13 +239,13 @@ border-top:1px solid #ccd2d8; border-bottom: 1px solid #ccd2d8; color:#233241; }
 .o-page .mm-menu.mm-vertical .mm-list .mm-panel { padding: 0px 0px 0px 40px !important; background-color: #0E1419 !important; }
 .o-page .mm-menu.mm-vertical .mm-list .mm-panel li { background-color: #0E1419; border-bottom: 1px solid #233241; border-left: 1px solid #233241; }
 .o-page .mm-menu > .mm-list { padding:0px; }
-.o-page .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen), 
+.o-page .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),
 .o-page .mm-menu .mm-list > li.mm-selected > span { background: #587EA9; color: #0E1419; }
 .o-page .mm-menu .mm-list > li.mm-selected i.i-small { background-position-y: -260px; }
 .o-page .mm-menu.mm-hassearch > .mm-panel { padding-top: 50px; }
 .o-page .mm-menu .mm-search input { border: 0px; background: rgba(0, 0, 0, 0); color: rgba(255, 255, 255, 0.6); }
 .o-page .mm-menu li.mm-noresults { text-align: center; font-size: 15px; display: none; padding: 10px; }
-.o-page .mm-list > li > a, 
+.o-page .mm-list > li > a,
 .o-page .mm-list > li > span { line-height: 30px; padding: 10px 10px 10px 15px; text-decoration: none; }
 .o-page .mm-list > li > a:hover { background: rgba(0, 0, 0, 0.1); }
 .o-page .mm-list a.mm-subopen { padding:0px;}
@@ -307,16 +307,16 @@ article img { width:100%; }
 div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
 div.gallery-item.big-item { float: left; width: 50%; }
 div.gallery-item { float: left; width: 33.33333333%; }
-div.gallery-item a { display: block; margin: 3px; border: 1px solid #fff; color: #FFF; } 
+div.gallery-item a { display: block; margin: 3px; border: 1px solid #fff; color: #FFF; }
 div.gallery-item img { display: block; width: 100%; height: auto; }
 
 /*********************************************************************************** Contact */
 .contactForm {  }
 .contactForm label{ width:100%; margin-top:10px; float: left; }
 .contactForm label .required { color:red; }
-.contactForm #ContactName { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
-.contactForm #ContactEmail { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
-.contactForm #ContactMessage { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 10px; color: #555; width: 90%; outline: none; min-height: 80px; }
+.contactForm #SpotName { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
+.contactForm #SpotEmail{ background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
+.contactForm #SpotDescription { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 10px; color: #555; width: 90%; outline: none; min-height: 80px; }
 .contactForm #SubmitContact { background-color: #4D7EA2; color: #FFF; padding: 10px 15px; border: none; text-transform: uppercase; cursor:pointer; margin-bottom: 10px; }
 .contactForm #SubmitContact:hover { background-color: #245070; }
 

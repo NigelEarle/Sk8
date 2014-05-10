@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-    <meta name="author" content="www.frebsite.nl" />
-    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-
-    <title>Ocean - Blog Single post</title>
-    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
-    <script type="text/javascript" src="js/o-script.js"></script>
-
-  </head>
-  <body class="o-page">
     <div id="page">
       <div id="header">
         <a href="#menu"></a>
@@ -32,12 +11,16 @@
 
         <article>
           <img src="img/blog/1.jpg" />
-          <h2><a href="#">Tech news</a></h2>
-          <p>
-            <span class="c-red">Lorem ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            <span class="c-red">Lorem ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          </p>
+              <tr>
+                <td><%=@spot.name %></td>
+                <td><%=@spot.description %></td>
+                <td><%=@spot.address %></td>
+                <td><%=@spot.best_time %></td>
+                <td><%=@spot.days %></td>
+                <td><%=@spot.rating %></td>
+              </tr>
+
+
           <div class="a-meta">
             <a href="#"><i class="i-comments i-small"></i>6 Comments</a>
             <a href="#"><i class="i-author i-small"></i>John Doe</a>
@@ -145,5 +128,5 @@
         </ul>
       </nav>
     </div>
-  </body>
-</html>
+
+  <script src="assets/jquery.flexslider.js"></script>

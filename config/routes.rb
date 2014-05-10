@@ -3,8 +3,8 @@ Sk8::Application.routes.draw do
   root 'site#index'
 
   #login/logout
-  get    'login' => 'session#new'
-  post   'login' => 'session#create'
+  get    'login'  => 'session#new'
+  post   'login'  => 'session#create'
   delete 'logout' => 'session#destroy'
   get    'logout' => 'session#destroy'
 
@@ -18,6 +18,9 @@ Sk8::Application.routes.draw do
   post   'registration' => 'registration#create'
 
   #spots
-  get    'spots' => 'spots#index'
-  get 'something' => 'spots#something'
+  get    'spots'      => 'spots#index'
+  get    'spots/new'  => 'spots#new'
+  get    'spots/:id' => 'spots#show'
+  post   'spots'      => 'spots#create'
+
 end

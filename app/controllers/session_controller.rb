@@ -4,7 +4,7 @@ class SessionController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def new
-    redirect_to root_url "You are logged in." if current_user
+    redirect_to spots_url if current_user
   end
 
   def create
@@ -18,7 +18,7 @@ class SessionController < ApplicationController
       # return if log_user_in( UserAuthenticator.new(session,flash).authenticate_user(user_params) )
       if user = User.authenticate(params[:user][:email], params[:user][:password])
         # successful login
-        render text: "Hell yeah!"
+        redirect_to spots_url
       else
         # fail
         render text: "Sorry! Try again"

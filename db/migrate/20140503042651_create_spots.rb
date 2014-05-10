@@ -3,7 +3,7 @@ class CreateSpots < ActiveRecord::Migration
     create_table :spots do |t|
       t.string :name
       t.string :description
-      t.time :time
+      t.string :best_time
       t.string :days
       t.integer :rating
       t.string :address

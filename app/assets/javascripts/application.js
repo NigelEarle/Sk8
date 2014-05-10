@@ -15,6 +15,5 @@
 //= require jquery.mmenu.min.all
 //= require jquery.flexslider
 //= require o-script
-//= require leaflet.min
 // = require map
 

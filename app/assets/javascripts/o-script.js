@@ -1,6 +1,6 @@
 
-$(window).load(function() { 
-	$("#loader").fadeOut();				
+$(window).load(function() {
+	$("#loader").fadeOut();
 });
 
 $(function(){
@@ -11,7 +11,7 @@ $(function(){
 		slidingSubmenus: true
 	});
 
-	
+
 	//---------------------------------------------------------------------- BANNER SLIDER
 	if($(".flexslider").length != 0) {
 		$('.flexslider').flexslider({
@@ -21,13 +21,13 @@ $(function(){
 			}
 		});
 	}
-				
+
 	//---------------------------------------------------------------------- Gallery
 	if($("#Gallery").length != 0) {
 		$("#Gallery a").photoSwipe();
 	}
-	
-	
+
+
 	//---------------------------------------------------------------------- ABOUT
 	$(".o-team-person").click(function(){
 		if($(this).hasClass("active"))
@@ -43,7 +43,7 @@ $(function(){
 
 			$(".o-person-details").html(self.find(".o-person-content").html());
 			$(".o-person-details").slideDown(500);
-			
+
 				// Easy-pie-chart
 				$('.o-person-details .chart.green').easyPieChart({
 					animate: 2500,
@@ -53,7 +53,7 @@ $(function(){
 					barColor : "#93af53",
 					size : 85
 				});
-				
+
 				$('.o-person-details .chart.orange').easyPieChart({
 					animate: 2500,
 					scaleColor: false,
@@ -62,7 +62,7 @@ $(function(){
 					barColor : "#dfa654",
 					size : 85
 				});
-				
+
 				$('.o-person-details .chart.red').easyPieChart({
 					animate: 2500,
 					scaleColor: false,
@@ -75,7 +75,7 @@ $(function(){
 		});
 	});
 
-	
+
     /* ---------------------------------------------------------------------- */
 	/*	Contact Map
 	/* ---------------------------------------------------------------------- */
@@ -95,34 +95,34 @@ $(function(){
 	} catch(err) {
 
 	}
-	
-	
+
+
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
-	$('#SubmitContact').on('click', function(e){
-		e.preventDefault();
+	// $('#SubmitContact').on('click', function(e){
+	// 	e.preventDefault();
 
-		$this = $(this);
-		
-		$.ajax({
-			type: "POST",
-			url: 'contact.php',
-			dataType: 'json',
-			cache: false,
-			data: $('#contact').serialize(),
-			success: function(data) {
-				if(data.info != 'error'){
-					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
-					$('#msg').hide().removeClass('success').removeClass('error').addClass('success').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
-				} else {
-					$('#msg').hide().removeClass('success').removeClass('error').addClass('error').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
-				}
-			}
-		});
-	});
+	// 	$this = $(this);
 
-	
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: 'contact.php',
+	// 		dataType: 'json',
+	// 		cache: false,
+	// 		data: $('#contact').serialize(),
+	// 		success: function(data) {
+	// 			if(data.info != 'error'){
+	// 				$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
+	// 				$('#msg').hide().removeClass('success').removeClass('error').addClass('success').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
+	// 			} else {
+	// 				$('#msg').hide().removeClass('success').removeClass('error').addClass('error').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
+	// 			}
+	// 		}
+	// 	});
+	// });
+
+
 });
 
 

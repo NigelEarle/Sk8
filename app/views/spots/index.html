@@ -1,44 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-    <meta name="author" content="www.frebsite.nl" />
-    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-
-    <title>Sk8</title>
-
-    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-
-    <script type="text/javascript" src="javascripts/leaflet.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
-    <script type="text/javascript" src="js/o-script.js"></script>
-
-  </head>
-  <body class="o-page">
-    <div id="page">
+ <div id="page">
       <!-- Header -->
       <div id="header">
         <a href="#menu"></a>
-        <span id="Logo" class="svg">
-          <img src="img/logo.svg" />
-        </span>
+          <span id="Logo" class="svg">
+            Sk8
+          </span>
         <a class="backBtn" href="javascript:history.back();"></a>
       </div>
-      <div class="subHeader"><i class="i-home i-small"></i>Welcome!</div>
+      <div class="subHeader"><i class="i-home i-small"></i>Welcome friend!</div>
 
-      <!-- Banner Map -->
-      <div class="bannerMap">
-        <section class="map">
-          <div id="map">
+      <!-- Banner map -->
+      <div id="map" style="width:100%; height:250px;"></div>
+      <!-- End Banner map -->
 
-          </div>
-        </section>
-      </div>
-      <!-- End Banner Map -->
+      <!-- Content/Spots -->
 
-      <!-- Content/ Spots-->
       <div id="spots">
         <div id="spot_list">
 
@@ -49,12 +25,12 @@
       <nav id="menu">
         <ul>
           <li class="Selected">
-            <a href="index.html">
-              <i class="i-small"></i>Find Spots
+            <a href="/spots">
+              <i class="i-home i-small"></i>Find Spots
             </a>
           </li>
           <li>
-            <a href="new.html">
+            <a href="/spots/new">
               <i class="i-small"></i>Create Spot
             </a>
           </li>
@@ -66,5 +42,3 @@
         </ul>
       </nav>
     </div>
-  </body>
-</html>
