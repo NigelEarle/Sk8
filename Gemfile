@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'gon'
+gem 'paperclip', "~> 4.1"
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -29,6 +30,7 @@ group :development, :test do
   gem "guard-livereload"
   gem "factory_girl_rails"
   gem "letter_opener"
+
 
 
 end

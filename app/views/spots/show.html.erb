@@ -53,28 +53,29 @@
                 </p>
                 <p class="desc">
                   <%= comment.content %>
+                  <%= image_tag comment.avatar %>
                 </p>
               </ul>
             <% end %>
 
-
             <hr>
-
-
-
 
             <ul>
               <li>
-                <form id="contact" action="/spots/<%=@spot.id %>/comments" method="post" class="contactForm">
+                <%= form_for @spot, :url => spot_comments_path(@spot), :html => { :method => :post, :multipart => true } do |form| %>
 
                   <label>Comment <span class="required">*</span></label>
 
                   <textarea id="ContactMessage" name="comment[content]" placeholder="Comment"></textarea>
 
+                  <label>Photos</label>
+
+                  <input type="file" name="comment[avatar]"placeholder="Photos">
+
                   <input type="submit"  class="btn-normal" id="SubmitContact" value="Comment">
 
                   <div id="msg" class="notifications" style="display:none"></div>
-                </form>
+                <% end %>
               </li>
             </ul>
           </div>
