@@ -2,6 +2,10 @@ Sk8::Application.routes.draw do
 
   root 'site#index'
 
+  resources :spots do
+    resources :comments, only: [:index, :create, :destroy]
+  end
+
   #login/logout
   get    'login'  => 'session#new'
   post   'login'  => 'session#create'
@@ -17,10 +21,5 @@ Sk8::Application.routes.draw do
   get    'registration' => 'registration#new'
   post   'registration' => 'registration#create'
 
-  #spots
-  get    'spots'      => 'spots#index'
-  get    'spots/new'  => 'spots#new'
-  get    'spots/:id' => 'spots#show'
-  post   'spots'      => 'spots#create'
 
 end

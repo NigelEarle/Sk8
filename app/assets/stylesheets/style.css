@@ -216,7 +216,7 @@ i.i-calendar.i-small { width:16px; height:16px; background-position: -172px -388
 
 i.i-small { margin: 0px 10px 0px 0px; left: 0px; }
 
-.mainIconPane { display:inline-block; margin-bottom: 15px; }
+.mainIconPane { display:block; margin-bottom: 15px; clear:both; padding-bottom:20px;}
 .mainIconPane h4 { margin: 0px 0px 5px; }
 .mainIconPane p { color:#979797; font-size:13px; }
 

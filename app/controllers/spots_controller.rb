@@ -6,18 +6,21 @@ class SpotsController < ApplicationController
     else
       @spots = Spot.all
     end
+
+    gon.spots = @spots
   end
 
   def new
+
   end
 
   def show
     @spot = Spot.find(params[:id])
-    # binding.pry
   end
 
   def create
     @spot = Spot.new(spot_params)
+    @spot.user_id = current_user.id
 
     if @spot.save
       redirect_to spots_url
@@ -33,7 +36,7 @@ class SpotsController < ApplicationController
 private
 
   def spot_params
-    params.require(:spot).permit(:name, :description, :address, :best_time, :days, :rating)
+    params.require(:spot).permit(:name, :description, :address, :best_time, :longitude, :latitude,   :days, :rating)
   end
 
 end

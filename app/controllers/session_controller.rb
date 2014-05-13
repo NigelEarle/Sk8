@@ -15,7 +15,7 @@ class SessionController < ApplicationController
 
     else
       #authenticate password flow
-      # return if log_user_in( UserAuthenticator.new(session,flash).authenticate_user(user_params) )
+      return if log_user_in( UserAuthenticator.new(session,flash).authenticate_user(user_params) )
       if user = User.authenticate(params[:user][:email], params[:user][:password])
         # successful login
         redirect_to spots_url

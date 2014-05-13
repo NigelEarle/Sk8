@@ -1,7 +1,7 @@
 
 $(function() {
 
-  map = L.map('map').setView([114.1310553, 22.2606655 ], 13);
+  map = L.map('map').setView([114.1310553, 22.2606655 ], 17);
 
   L.tileLayer('https://{s}.tiles.mapbox.com/v3/nwre.i640d78h/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -22,8 +22,18 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  var lat = position.coords.latitude;
-  var longitude = position.coords.longitude;
-  map.panTo(new L.LatLng(lat, longitude));
-  L.marker([lat, longitude]).addTo(map);
+  window.lat = position.coords.latitude;
+  window.longitude = position.coords.longitude;
+    $('input#latitude').val(window.lat);
+    $('input#longitude').val(window.longitude);
+    $('#SpotAddress').attr('placeholder','(GPS Found - No Address neeeded)');
+  map.panTo(new L.LatLng(window.lat, window.longitude));
+
+  for(var i = 0; i < gon.spots.length; i++) {
+   var spot = gon.spots[i]
+   L.marker([spot.latitude, spot.longitude]).addTo(map)
+    .bindPopup(spot.name +"<br>"+ spot.description)
+  }
+
+
 }
