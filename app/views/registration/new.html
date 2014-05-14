@@ -1,5 +1,11 @@
 <div class="registration-page">
-  <h1>Register</h1>
+  <div id="header">
+    <a href="#menu"></a>
+      <span id="Logo" class="svg">
+        Sk8
+      </span>
+  </div>
+  <div class="subHeader">Register</div>
   <div class="registration-form row">
     <form id="registration-form" action="registration" method="post">
       <div class="row">
@@ -12,7 +18,7 @@
 
       <div class="row">
         <div class="small-8 small-centered columns">
-          <label class="hidden" for"password">Password:</label>
+          <label class="hidden" for="password">Password:</label>
           <input type="text" id="password"
           name="user[password]" placeholder="password" />
         </div>
@@ -27,7 +33,7 @@
 
       <div class="row">
         <div class="small-8 small-centered columns">
-          <input id="register" class="right" type="submit" value="Sign-up" />
+          <input id="register" class="btn-normal" type="submit" value="Sign-up" />
         </div>
       </div>
     </form>
