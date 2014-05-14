@@ -15,12 +15,12 @@
 
         <h2 class="title"></h2>
 
-        <form id="contact" class="contactForm" action="/spots" method="post">
+        <form id="contact" class="contactForm" action="/spots" method="post" enctype="multipart/form-data">
 
           <label>Name <span class="required">*</span></label>
           <input type="text" name="spot[name]" id="SpotName" placeholder="Spot Name">
 
-          <label>Address <span class="required">*</span></label>
+          <label>Address<span class="required"></span></label>
           <input type="text" name="spot[address]" id="SpotAddress" placeholder="Spot Address">
 
 
@@ -54,6 +54,9 @@
 
           </div>
 
+          <label>Photos</label>
+
+          <input type="file" name="spot[avatar]" placeholder="Photos">
 
           <input type="hidden" id="latitude" name="spot[latitude]"value="123">
 
@@ -77,8 +80,8 @@
             </a>
           </li>
           <li>
-            <a href="/spot/new">
-              <i class="i-small"></i>Create Spot
+            <a href="/spots/new">
+              <i class="i-small"></i>Add Spot
             </a>
           </li>
           <li>

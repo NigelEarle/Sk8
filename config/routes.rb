@@ -1,6 +1,6 @@
 Sk8::Application.routes.draw do
 
-  root 'site#index'
+  root 'session#new'
 
   resources :spots do
     resources :comments, only: [:index, :create, :destroy]

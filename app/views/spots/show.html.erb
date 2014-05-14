@@ -13,11 +13,11 @@
             <section class="slider">
               <div class="flexslider">
                 <ul class="slides">
-                  <% @spot.comments.each do |comment| %>
+
                   <li>
-                    <%= image_tag comment.avatar %>
+                    <%= image_tag @spot.avatar %>
                   </li>
-                  <% end %>
+
                 </ul>
               </div>
             </section>

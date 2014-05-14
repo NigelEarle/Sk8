@@ -9,4 +9,6 @@ class Spot < ActiveRecord::Base
   validates :name, presence: :true, uniqueness: {case_sensitive: true}
   # validates :address, presence: :true, uniqueness: {case_sensituve: true}
 
+  has_attached_file :avatar
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 end
