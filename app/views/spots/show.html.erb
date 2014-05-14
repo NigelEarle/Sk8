@@ -9,9 +9,19 @@
       <div class="subHeader"><i class="i-blog i-small"></i><%=@spot.name %></div>
       <div id="content">
         <article>
-          <!-- <div class="slider">
-            <img src="img/blog/1.jpg" width="100%" height="150px" />
-          </div> -->
+          <div class="bannerPane">
+            <section class="slider">
+              <div class="flexslider">
+                <ul class="slides">
+                  <% @spot.comments.each do |comment| %>
+                  <li>
+                    <%= image_tag comment.avatar %>
+                  </li>
+                  <% end %>
+                </ul>
+              </div>
+            </section>
+          </div>
           <div class="a-meta">
             <i class="i-author i-small"></i><%=@spot.user.email if @spot.user%>
           </div>
@@ -49,7 +59,11 @@
             <% @spot.comments.each do |comment| %>
               <ul>
                 <p class="c-a-name">
-                  <strong><%= comment.user.email %></strong>
+
+                  <i class="i-author i-small"></i><strong><%= comment.user.email %></strong>
+
+                  <i class="i-calendar i-small"></i><%= comment.user.created_at %>
+
                 </p>
                 <p class="desc">
                   <%= comment.content %>
@@ -102,5 +116,3 @@
         </ul>
       </nav>
     </div>
-
-  <script src="assets/jquery.flexslider.js"></script>

@@ -316,6 +316,7 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 .contactForm label .required { color:red; }
 .contactForm #SpotName { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
 .contactForm #SpotEmail{ background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
+.contactForm #SpotAddress{ background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 3px 10px; height: 30px; color: #555; width: 90%; outline: none; }
 .contactForm #SpotDescription { background-color: #EBECEF; border: 1px solid #D7D9DB; padding: 10px; color: #555; width: 90%; outline: none; min-height: 80px; }
 .contactForm #SubmitContact { background-color: #4D7EA2; color: #FFF; padding: 10px 15px; border: none; text-transform: uppercase; cursor:pointer; margin-bottom: 10px; }
 .contactForm #SubmitContact:hover { background-color: #245070; }
