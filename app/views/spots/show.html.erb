@@ -4,7 +4,6 @@
         <span id="Logo" class="svg">
           Sk8
         </span>
-        <a class="backBtn" href="javascript:history.back();"></a>
       </div>
       <div class="subHeader"><i class="i-blog i-small"></i><%=@spot.name %></div>
       <div id="content">
@@ -15,7 +14,7 @@
                 <ul class="slides">
 
                   <li>
-                    <%= image_tag @spot.avatar %>
+                    <%= image_tag @spot.avatar if @spot.avatar.exists? %>
                   </li>
 
                 </ul>
@@ -46,8 +45,8 @@
             </div>
             <div class="spotDays">
             </div>
-            <div class="spotRating">
-              <%=@spot.rating %>
+            <div data-score=<%=@spot.rating %> id="star">
+
             </div>
           </div>
 
@@ -67,7 +66,7 @@
                 </p>
                 <p class="desc">
                   <%= comment.content %>
-                  <%= image_tag comment.avatar %>
+                  <%= image_tag comment.avatar if comment.avatar.exists? %>
                 </p>
               </ul>
             <% end %>
@@ -116,3 +115,23 @@
         </ul>
       </nav>
     </div>
+
+
+  <script>
+    $("#star").raty({
+      score: function() {
+        return $(this).attr('data-score');
+      },
+      path: "/images/",
+      width: 160,
+      readOnly: true});
+
+
+  </script>
+
+
+
+
+
+
+

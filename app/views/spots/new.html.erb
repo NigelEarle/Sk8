@@ -5,7 +5,6 @@
         <span id="Logo" class="svg">
           Sk8 - Add Spot
         </span>
-        <a class="backBtn" href="javascript:history.back();"></a>
       </div>
       <div class="subHeader"><i class="i-small"></i></div>
       <!-- MAP -->
@@ -29,12 +28,13 @@
 
           <div class="row">
             <label>Rating <span class="required">*</span></label>
-            <input type="radio" name="spot[rating]" value="1">1</input>
+            <div id="star">
+            <!-- <input type="radio" name="spot[rating]" value="1">1</input>
             <input type="radio" name="spot[rating]" value="2">2</input>
             <input type="radio" name="spot[rating]" value="3">3</input>
             <input type="radio" name="spot[rating]" value="4">4</input>
-            <input type="radio" name="spot[rating]" value="5">5</input>
-
+            <input type="radio" name="spot[rating]" value="5">5</input> -->
+            </div>
           </div>
 
           <div class="row">
@@ -101,4 +101,14 @@ if (window.lat != null && window.longitude != null) {
     $('input#longitude').val(window.longitude);
     $('#SpotAddress').attr('placeholder','GPS Found');
   };
+  $("#star").raty({
+      scoreName: "spot[rating]",
+      path: "/images/",
+      width: 160,
+      readOnly: false});
+
+
+
+
+
 </script>

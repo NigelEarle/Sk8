@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker|Oleo+Script:400,700|Slackey);
 @import url("foundation.css");
 
 @font-face {
@@ -38,6 +38,8 @@ h1, h2, h3, h4, h5, h6
 	font-weight: bold;
 	margin: 20px 0 10px 0;
 }
+
+
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, textarea, input { font-family: 'Open Sans'; font-weight: normal; }
 
@@ -377,3 +379,26 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 #loader { background: rgba(88, 126, 172, 0.85); bottom: 0; height: 100%; left: 0; position: absolute; right: 0; top: 0; width: 100%; z-index: 9999; }
 #loaderInner { left: 50%; margin: -50px 0 0 -62px; position: absolute; top: 50%; color: #fff; font-size: 25px; }
 #loaderInner p { margin-left: 22px; font-size: 17px; }
+
+
+#star img {
+	width: 16px;
+}
+
+#Logo{
+	padding-top: 5px !important;
+	font-family: 'Slackey', cursive;
+	font-size: 2em;
+}
+
+.hidden{
+	display: none;
+}
+#user_email, #password {
+	margin: 60px auto;
+	width: 80%;
+}
+
+.login-page{
+	text-align:center;
+}

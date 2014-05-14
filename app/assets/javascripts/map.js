@@ -26,13 +26,17 @@ function showPosition(position) {
   window.longitude = position.coords.longitude;
     $('input#latitude').val(window.lat);
     $('input#longitude').val(window.longitude);
-    $('#SpotAddress').attr('placeholder','(GPS Found - No Address neeeded)');
+    $('#SpotAddress').attr('placeholder','(GPS Found - No Address needed)');
   map.panTo(new L.LatLng(window.lat, window.longitude));
 
-  for(var i = 0; i < gon.spots.length; i++) {
-   var spot = gon.spots[i]
-   L.marker([spot.latitude, spot.longitude]).addTo(map)
-    .bindPopup(spot.name +"<br>"+ spot.description)
+  if ( "gon" in window ) {
+    for(var i = 0; i < gon.spots.length; i++) {
+     var spot = gon.spots[i]
+     L.marker([spot.latitude, spot.longitude]).addTo(map)
+      .bindPopup(spot.name +"<br>"+ spot.description)
+    }
+  } else {
+    L.marker([window.lat, window.longitude]).addTo(map);
   }
 
 

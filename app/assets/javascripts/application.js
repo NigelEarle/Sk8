@@ -15,5 +15,5 @@
 //= require jquery.mmenu.min.all
 //= require jquery.flexslider
 //= require o-script
-// = require map
-
+//= require map
+//= require jquery.raty

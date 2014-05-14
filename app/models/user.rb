@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}
-  validates :username, presence: true, uniqueness: {case_sensitive: false}
   validates :password, confirmation: true
 
   has_many :spots

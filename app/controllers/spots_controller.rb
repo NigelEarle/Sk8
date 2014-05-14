@@ -15,10 +15,14 @@ class SpotsController < ApplicationController
   end
 
   def show
+
     @spot = Spot.find(params[:id])
+
+    gon.spot = @spot
   end
 
   def create
+
     @spot = Spot.new(spot_params)
     @spot.user_id = current_user.id
 
@@ -29,6 +33,7 @@ class SpotsController < ApplicationController
       render text:"Missed a field..."
     end
 
+    gon.spot = @spot
   end
 
 
