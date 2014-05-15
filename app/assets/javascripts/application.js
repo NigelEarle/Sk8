@@ -17,3 +17,4 @@
 //= require o-script
 //= require map
 //= require jquery.raty
+//= require jquery.nailthumb.1.1

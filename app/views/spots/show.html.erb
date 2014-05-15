@@ -36,14 +36,10 @@
             </div>
             <div class="spotBestTime">
 
-              <p>Best time to skate is:</p>
-
-              <div class="row">
-                <pr>
-                <p><%=@spot.days %> <%=@spot.best_time %></p>
+                <p><i>Come Skate...</i></p>
+                <p><%=@spot.days %>, <%=@spot.best_time %></p>
               </div>
 
-            </div>
             <div class="spotDays">
             </div>
             <div data-score=<%=@spot.rating %> id="star">
@@ -105,7 +101,7 @@
           </li>
           <li>
             <a href="/spots/new">
-              <i class="i-small"></i>Create Spot
+              <i class="i-small"></i>Add Spot
             </a>
           </li>
           <li>

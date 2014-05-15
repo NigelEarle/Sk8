@@ -415,7 +415,7 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 	background-color: #4D7EA2; color: #FFF; padding: 10px 15px; border: none; text-transform: uppercase; cursor:pointer; margin-bottom: 10px;
 }
 
-.description, .article-comments ul {
+.description, .article-comments ul, .contactForm, .mainIconPane {
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	padding: 5px 10px;
@@ -423,7 +423,31 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 	box-shadow: 0 2px 5px 0 #ddd;
 }
 
+.mainIconPane{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
 .description h2 {
 	margin-top: 5px;
 }
 
+.square-thumb img{
+	border-radius: 150000000px;
+}
+
+#content a {
+	text-decoration: none;
+}
+
+.mainIconPane h4 {
+	font-weight: bold;
+	font-size: 1.8em;
+
+}
+/*
+.square-thumb{
+	width: 10px;
+	height: 10px;
+	display: hidden;
+}*/

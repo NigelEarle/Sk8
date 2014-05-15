@@ -19,10 +19,14 @@
       <% @spots.each do |spot| %>
         <%= link_to spot_path(spot) do %>
           <div class="mainIconPane">
-            <span class="i-pane i-green">
-              <i class="i-phone"></i>
+            <span class="i-pane">
+              <div class="thumbnail-container square-thumb" >
+
+              <%= image_tag spot.avatar if spot.avatar.exists? %>
+              </div>
             </span>
             <h4><%= spot.name %></h4>
+            <div data-score=<%= spot.rating %> class="star"></div>
             <p>
                <%= spot.description %>
             </p>
@@ -53,3 +57,15 @@
         </ul>
       </nav>
     </div>
+    <script>
+
+    $(".star").raty({
+      score: function() {
+        return $(this).attr('data-score');
+      },
+      path: "/images/",
+      width: 200,
+      readOnly: true});
+
+
+  </script>
