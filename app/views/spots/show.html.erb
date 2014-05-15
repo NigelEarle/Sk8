@@ -10,7 +10,7 @@
         <article>
           <div class="bannerPane">
             <section class="slider">
-              <div class="flexslider">
+              <div>
                 <ul class="slides">
 
                   <li>
@@ -39,6 +39,7 @@
               <p>Best time to skate is:</p>
 
               <div class="row">
+                <pr>
                 <p><%=@spot.days %> <%=@spot.best_time %></p>
               </div>
 
@@ -83,9 +84,9 @@
 
                   <label>Photos</label>
 
-                  <input type="file" name="comment[avatar]"placeholder="Photos">
+                  <input type="file" name="comment[avatar]" class="yellowButton" placeholder="Photos">
 
-                  <input type="submit"  class="btn-normal" id="SubmitContact" value="Comment">
+                  <input type="submit" class="btn-normal" id="SubmitComment" value="Comment">
 
                   <div id="msg" class="notifications" style="display:none"></div>
                 <% end %>
