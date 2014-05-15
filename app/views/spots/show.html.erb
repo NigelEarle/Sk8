@@ -77,7 +77,7 @@
               <li>
                 <%= form_for @spot, :url => spot_comments_path(@spot), :html => { :method => :post, :multipart => true } do |form| %>
 
-                  <label>Comment <span class="required">*</span></label>
+                  <label>Comment</label>
 
                   <textarea id="ContactMessage" name="comment[content]" placeholder="Comment"></textarea>
 
